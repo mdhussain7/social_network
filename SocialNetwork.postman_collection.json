@@ -1,0 +1,498 @@
+{
+	"info": {
+		"_postman_id": "70c627ce-ad5d-4b74-aa33-d50138e76f78",
+		"name": "SocialNetwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30020323",
+		"_collection_link": "https://grey-resonance-202196.postman.co/workspace/New-Team-Workspace~15091669-be89-49c9-8e96-8e6cf6542efa/collection/30020323-70c627ce-ad5d-4b74-aa33-d50138e76f78?action=share&source=collection_link&creator=30020323"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "abcd3@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "efgh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "abcd1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Mohammed Hussain",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token xtZViSSsec5Nb0aTrUPJwVFM7MHuvvQIbl7P7cSstNXqP29N7sAlrsu0vcfeU9Yg",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "xtZViSSsec5Nb0aTrUPJwVFM7MHuvvQIbl7P7cSstNXqP29N7sAlrsu0vcfeU9Yg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mdhussainsabhussain@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Mohammed Hussain",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "vaOiNLz3VAppMjQ6IFL6thitipBowe9uDTkf98IpEgTCqEagzrELWUCUJdgRDAoi",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/search/?q=hussain",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "hussain"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Friend request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token xtZViSSsec5Nb0aTrUPJwVFM7MHuvvQIbl7P7cSstNXqP29N7sAlrsu0vcfeU9Yg",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "xtZViSSsec5Nb0aTrUPJwVFM7MHuvvQIbl7P7cSstNXqP29N7sAlrsu0vcfeU9Yg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mdhussainsabhussain@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Mohammed Hussain",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "to_user_id",
+							"value": "abcd3@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "from_user_id",
+							"value": "abcd2@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/friend-request/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend-request",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Friend request Pending List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token xtZViSSsec5Nb0aTrUPJwVFM7MHuvvQIbl7P7cSstNXqP29N7sAlrsu0vcfeU9Yg",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "xtZViSSsec5Nb0aTrUPJwVFM7MHuvvQIbl7P7cSstNXqP29N7sAlrsu0vcfeU9Yg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mdhussainsabhussain@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Mohammed Hussain",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "to_user_id",
+							"value": "mdhussainsabhussain+1@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "from_user_id",
+							"value": "mdhussainsabhussain@gmail.com",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/friend-request/?user_id=abcd2@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend-request",
+						""
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "abcd2@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Friend Request Action",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token xtZViSSsec5Nb0aTrUPJwVFM7MHuvvQIbl7P7cSstNXqP29N7sAlrsu0vcfeU9Yg",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "xtZViSSsec5Nb0aTrUPJwVFM7MHuvvQIbl7P7cSstNXqP29N7sAlrsu0vcfeU9Yg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mdhussainsabhussain@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Mohammed Hussain",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "to_user_id",
+							"value": "mdhussainsabhussain+1@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "from_user_id",
+							"value": "mdhussainsabhussain@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "action",
+							"value": "accepted",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "abcd1@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/friend-request-action/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend-request-action",
+						""
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "mdhussainsabhussain@gmail.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Friend List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token xtZViSSsec5Nb0aTrUPJwVFM7MHuvvQIbl7P7cSstNXqP29N7sAlrsu0vcfeU9Yg",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "xtZViSSsec5Nb0aTrUPJwVFM7MHuvvQIbl7P7cSstNXqP29N7sAlrsu0vcfeU9Yg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mdhussainsabhussain@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Mohammed Hussain",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "to_user_id",
+							"value": "mdhussainsabhussain+1@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "from_user_id",
+							"value": "mdhussainsabhussain@gmail.com",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/friends/?user_id=abcd1@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friends",
+						""
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "abcd1@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "vaOiNLz3VAppMjQ6IFL6thitipBowe9uDTkf98IpEgTCqEagzrELWUCUJdgRDAoitoken"
+		}
+	]
+}
